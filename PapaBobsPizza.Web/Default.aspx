@@ -21,19 +21,17 @@
             <div class="form-group">
                 <label>Size:</label>
                 <asp:DropDownList ID="sizeDropDownList" runat="server" CssClass="form-control">
-                    <asp:ListItem>Option 1</asp:ListItem>
-                    <asp:ListItem>Option 2</asp:ListItem>
-                    <asp:ListItem>Option 3</asp:ListItem>
-                    <asp:ListItem>Option 4</asp:ListItem>
+                    <asp:ListItem>Small (12 inch - $12)</asp:ListItem>
+                    <asp:ListItem>Medium (14 inch - $14)</asp:ListItem>
+                    <asp:ListItem>Large (16 inch - $16)</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div class="form-group">
                 <label>Crust:</label>
                 <asp:DropDownList ID="crustDropDownList" runat="server" CssClass="form-control">
-                    <asp:ListItem>Option 1</asp:ListItem>
-                    <asp:ListItem>Option 2</asp:ListItem>
-                    <asp:ListItem>Option 3</asp:ListItem>
-                    <asp:ListItem>Option 4</asp:ListItem>
+                    <asp:ListItem>Regular</asp:ListItem>
+                    <asp:ListItem>Thin</asp:ListItem>
+                    <asp:ListItem>Thick (+ $2)</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div class="custom-checkbox"><label><asp:CheckBox ID="sausageCheckBox" runat="server"></asp:CheckBox> Sausage</label></div>
