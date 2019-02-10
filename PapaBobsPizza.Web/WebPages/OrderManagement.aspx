@@ -17,7 +17,19 @@
             </div>
             
             <!-- This is the grid -->
-            <asp:GridView ID="OrdersGridView" runat="server"></asp:GridView>
+            <asp:GridView ID="OrdersGridView" runat="server" AutoGenerateColumns="False">
+                <Columns>
+                    <asp:ButtonField Text=" Complete " />
+                    <asp:BoundField DataField="OrderID" HeaderText=" Order ID " />
+                    <asp:BoundField DataField="Size" HeaderText=" Pizza Size " />
+                    <asp:BoundField DataField="Crust" HeaderText=" Crust Type " />
+                    <asp:CheckBoxField DataField="Sausage" HeaderText=" Sausage " />
+                    <asp:CheckBoxField DataField="Pepperoni" HeaderText=" Pepperoni " />
+                    <asp:CheckBoxField DataField="Onions" HeaderText=" Onions " />
+                    <asp:CheckBoxField DataField="GreenPeppers" HeaderText=" Green Peppers " />
+                    <asp:CheckBoxField DataField="Completed" HeaderText=" Complete? " />
+                </Columns>
+            </asp:GridView>
         </div>
     </form>
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
