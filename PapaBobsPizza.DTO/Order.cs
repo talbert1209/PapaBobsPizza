@@ -20,7 +20,7 @@ namespace PapaBobsPizza.DTO
         public string Address { get; set; }
         public string ZipCode { get; set; }
         public string PhoneNumber { get; set; }
-        public bool PaymentType { get; set; }
+        public string PaymentType { get; set; }
         public bool Completed { get; set; }
     }
 }

@@ -21,7 +21,7 @@
           <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ZipCode" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PhoneNumber" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PaymentType" Type="bit" Nullable="false" />
+          <Property Name="PaymentType" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Completed" Type="bit" Nullable="false" />
         </EntityType>
         <EntityContainer Name="PBPizzaDBModelStoreContainer">
@@ -48,7 +48,7 @@
           <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PaymentType" Type="Boolean" Nullable="false" />
+          <Property Name="PaymentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Completed" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityContainer Name="PBPizzaDBEntities" annotation:LazyLoadingEnabled="true">

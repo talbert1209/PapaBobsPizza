@@ -28,7 +28,7 @@ namespace PapaBobsPizza.Web.WebPages
                 Address = addressTextBox.Text,
                 ZipCode = zipTextBox.Text,
                 PhoneNumber = phoneNumberTextBox.Text,
-                
+                PaymentType = paymentTypeRadioButtonList.SelectedValue
             };
         }
 
