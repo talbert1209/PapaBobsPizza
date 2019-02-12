@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PapaBobsPizza.Web {
+namespace PapaBobsPizza.Web.WebPages {
     
     
     public partial class Default {

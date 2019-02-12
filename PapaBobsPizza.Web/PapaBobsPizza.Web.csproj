@@ -87,16 +87,6 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="PBPizzaDBEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PBPizzaDBEntities.Context.cs</LastGenOutput>
-      <DependentUpon>PBPizzaDBEntities.edmx</DependentUpon>
-    </Content>
-    <Content Include="PBPizzaDBEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PBPizzaDBEntities.edmx</DependentUpon>
-      <LastGenOutput>PBPizzaDBEntities.cs</LastGenOutput>
-    </Content>
     <Content Include="WebPages\Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -122,13 +112,6 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="WebPages\OrderManagement.aspx" />
-    <EntityDeploy Include="PBPizzaDBEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PBPizzaDBEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="PBPizzaDBEntities.edmx.diagram">
-      <DependentUpon>PBPizzaDBEntities.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -154,24 +137,6 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Order.cs">
-      <DependentUpon>PBPizzaDBEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PBPizzaDBEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PBPizzaDBEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PBPizzaDBEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PBPizzaDBEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PBPizzaDBEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PBPizzaDBEntities.edmx</DependentUpon>
-    </Compile>
     <Compile Include="WebPages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,6 +176,16 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PapaBobsPizza.Domain\PapaBobsPizza.Domain.csproj">
+      <Project>{90e5466b-13be-4fea-9c6b-8d2ef36f15f7}</Project>
+      <Name>PapaBobsPizza.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PapaBobsPizza.DTO\PapaBobsPizza.DTO.csproj">
+      <Project>{25a01912-4b55-4df5-a310-7e414a462542}</Project>
+      <Name>PapaBobsPizza.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

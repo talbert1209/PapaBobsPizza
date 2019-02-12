@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PapaBobsPizza.Web
+namespace PapaBobsPizza.Data
 {
     using System;
     using System.Data.Entity;

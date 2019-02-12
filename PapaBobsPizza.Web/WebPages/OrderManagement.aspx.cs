@@ -11,10 +11,9 @@ namespace PapaBobsPizza.Web.WebPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            PBPizzaDBEntities db = new PBPizzaDBEntities();
-            var orders = db.Orders;
+            var orders = Domain.OrdersManager.GetOrders();
 
-            OrdersGridView.DataSource = orders.ToList();
+            OrdersGridView.DataSource = orders;
             OrdersGridView.DataBind();
         }
     }
