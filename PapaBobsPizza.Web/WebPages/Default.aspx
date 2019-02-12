@@ -60,11 +60,13 @@
 
             <!-- Payment information -->
             <h4>Payment information</h4>
-            <div class="custom-checkbox"><asp:RadioButton ID="cashRadioButton" runat="server" GroupName="paymentRadioButtons" /><label> Cash</label></div>
-            <div class="custom-checkbox"><asp:RadioButton ID="creditRadioButton" runat="server" GroupName="paymentRadioButtons" /><label> Credit</label></div>
+            <asp:RadioButtonList ID="paymentTypeRadioButtonList" runat="server">
+                <asp:ListItem Text ="Cash" Value="1" />
+                <asp:ListItem Text ="Credit" Value="2" />
+            </asp:RadioButtonList>
             
             <!-- Order button -->
-            <asp:Button ID="orderButton" runat="server" Text=" Order " CssClass="btn btn-primary"/>
+            <asp:Button ID="orderButton" runat="server" Text=" Order " CssClass="btn btn-primary" OnClick="orderButton_Click"/>
             <br />
             <h3>Order Total: </h3>
             <br/>

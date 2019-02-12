@@ -13,5 +13,28 @@ namespace PapaBobsPizza.Web.WebPages
         {
 
         }
+
+        protected void orderButton_Click(object sender, EventArgs e)
+        {
+            var order = new DTO.Order
+            {
+                Size = sizeDropDownList.Text,
+                Crust = crustDropDownList.Text,
+                Sausage = sausageCheckBox.Checked,
+                Pepperoni = pepperoniCheckBox.Checked,
+                Onions = onionsCheckBox.Checked,
+                GreenPeppers = greenPeppersCheckBox.Checked,
+                Name = nameTextBox.Text,
+                Address = addressTextBox.Text,
+                ZipCode = zipTextBox.Text,
+                PhoneNumber = phoneNumberTextBox.Text,
+                
+            };
+        }
+
+        private void ClearFields()
+        {
+            
+        }
     }
 }

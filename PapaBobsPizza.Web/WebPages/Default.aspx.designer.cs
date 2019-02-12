@@ -112,22 +112,13 @@ namespace PapaBobsPizza.Web.WebPages {
         protected global::System.Web.UI.WebControls.TextBox phoneNumberTextBox;
         
         /// <summary>
-        /// cashRadioButton control.
+        /// paymentTypeRadioButtonList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton cashRadioButton;
-        
-        /// <summary>
-        /// creditRadioButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton creditRadioButton;
+        protected global::System.Web.UI.WebControls.RadioButtonList paymentTypeRadioButtonList;
         
         /// <summary>
         /// orderButton control.
