@@ -20,7 +20,7 @@
             <h4>Build your pizza</h4>
             <div class="form-group">
                 <label>Size:</label>
-                <asp:DropDownList ID="sizeDropDownList" runat="server" CssClass="form-control" AutoPostBack="True">
+                <asp:DropDownList ID="sizeDropDownList" runat="server" CssClass="form-control" OnSelectedIndexChanged="sizeDropDownList_SelectedIndexChanged">
                     <asp:ListItem>Small (12 inch - $12)</asp:ListItem>
                     <asp:ListItem>Medium (14 inch - $14)</asp:ListItem>
                     <asp:ListItem>Large (16 inch - $16)</asp:ListItem>
@@ -28,16 +28,16 @@
             </div>
             <div class="form-group">
                 <label>Crust:</label>
-                <asp:DropDownList ID="crustDropDownList" runat="server" CssClass="form-control" AutoPostBack="True">
+                <asp:DropDownList ID="crustDropDownList" runat="server" CssClass="form-control">
                     <asp:ListItem>Regular</asp:ListItem>
                     <asp:ListItem>Thin</asp:ListItem>
                     <asp:ListItem>Thick (+ $2)</asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <div class="custom-checkbox"><label><asp:CheckBox ID="sausageCheckBox" runat="server" AutoPostBack="True"></asp:CheckBox> Sausage</label></div>
-            <div class="custom-checkbox"><label><asp:CheckBox ID="pepperoniCheckBox" runat="server" AutoPostBack="True"></asp:CheckBox> Pepperoni</label></div>
-            <div class="custom-checkbox"><label><asp:CheckBox ID="onionsCheckBox" runat="server" AutoPostBack="True"></asp:CheckBox> Onions</label></div>
-            <div class="custom-checkbox"><label><asp:CheckBox ID="greenPeppersCheckBox" runat="server" AutoPostBack="True"></asp:CheckBox> Green Peppers</label></div>
+            <div class="custom-checkbox"><label><asp:CheckBox ID="sausageCheckBox" runat="server"></asp:CheckBox> Sausage</label></div>
+            <div class="custom-checkbox"><label><asp:CheckBox ID="pepperoniCheckBox" runat="server"></asp:CheckBox> Pepperoni</label></div>
+            <div class="custom-checkbox"><label><asp:CheckBox ID="onionsCheckBox" runat="server"></asp:CheckBox> Onions</label></div>
+            <div class="custom-checkbox"><label><asp:CheckBox ID="greenPeppersCheckBox" runat="server"></asp:CheckBox> Green Peppers</label></div>
             
             <!-- Delivery information -->
             <h4>Deliver to:</h4>

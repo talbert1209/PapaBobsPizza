@@ -30,19 +30,16 @@ namespace PapaBobsPizza.Web.WebPages
                 ZipCode = zipTextBox.Text,
                 PhoneNumber = phoneNumberTextBox.Text,
                 PaymentType = paymentTypeRadioButtonList.SelectedValue,
-                TotalCost = Convert.ToDecimal(totalCostLabel.Text)
+                TotalCost = decimal.Parse(totalCostLabel.Text)
             };
 
             Domain.OrdersManager.AddOrder(newOrder);
         }
 
-        private void ClearFields()
+        protected void sizeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            totalCostLabel.Text = Domain.PizzaPrice.CalculateTotal(sizeDropDownList.SelectedIndex, crustDropDownList.SelectedIndex, 
+                sausageCheckBox.Checked, pepperoniCheckBox.Checked, onionsCheckBox.Checked, greenPeppersCheckBox.Checked).ToString("C");
         }
-
-        
-
-
     }
 }
