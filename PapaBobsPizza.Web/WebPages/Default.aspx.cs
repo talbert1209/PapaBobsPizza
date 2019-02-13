@@ -11,8 +11,8 @@ namespace PapaBobsPizza.Web.WebPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            totalCostLabel.Text = CalculateTotal().ToString("C");
-
+            //totalCostLabel.Text = Domain.PizzaPrice.CalculateTotal(sizeDropDownList.SelectedIndex, crustDropDownList.SelectedIndex, sausageCheckBox.Checked, 
+            //    pepperoniCheckBox.Checked, onionsCheckBox.Checked, greenPeppersCheckBox.Checked).ToString("C");
         }
 
         protected void orderButton_Click(object sender, EventArgs e)
@@ -41,12 +41,7 @@ namespace PapaBobsPizza.Web.WebPages
             
         }
 
-        private decimal CalculateTotal()
-        {
-            return Domain.PizzaPrice.GetPizzaSizePrice(sizeDropDownList.SelectedIndex) +
-                   Domain.PizzaPrice.GetCrustPrice(crustDropDownList.SelectedIndex) + 
-                   Domain.PizzaPrice.GetToppingPrice(sausageCheckBox.Checked, pepperoniCheckBox.Checked, onionsCheckBox.Checked, greenPeppersCheckBox.Checked);
-        }
+        
 
 
     }

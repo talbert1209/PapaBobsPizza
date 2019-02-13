@@ -59,5 +59,12 @@ namespace PapaBobsPizza.Domain
 
             return toppingPrice;
         }
+
+        public static decimal CalculateTotal(int sizeIndex, int crustIndex, bool sausage, bool pepperoni, bool onions, bool greenPeppers)
+        {
+            return Domain.PizzaPrice.GetPizzaSizePrice(sizeIndex) +
+                   Domain.PizzaPrice.GetCrustPrice(crustIndex) +
+                   Domain.PizzaPrice.GetToppingPrice(sausage, pepperoni, onions, greenPeppers);
+        }
     }
 }
