@@ -22,5 +22,6 @@ namespace PapaBobsPizza.DTO
         public string PhoneNumber { get; set; }
         public string PaymentType { get; set; }
         public bool Completed { get; set; }
+
     }
 }

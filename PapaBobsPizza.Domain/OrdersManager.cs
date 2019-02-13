@@ -14,5 +14,10 @@ namespace PapaBobsPizza.Domain
             var orders = Data.OrdersRepository.GetOrders();
             return orders;
         }
+
+        public static void AddOrder(DTO.Order newOrder)
+        {
+            Data.OrdersRepository.AddOrder(newOrder);
+        }
     }
 }

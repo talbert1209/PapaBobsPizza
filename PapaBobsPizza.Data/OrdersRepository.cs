@@ -40,5 +40,31 @@ namespace PapaBobsPizza.Data
 
             return dtoOrders;
         }
+
+        public static void AddOrder(DTO.Order newOrder)
+        {
+            PBPizzaDBEntities db = new PBPizzaDBEntities();
+            var orders = db.Orders;
+
+            var order = new Order
+            {
+                Size = newOrder.Size,
+                Crust = newOrder.Crust,
+                Sausage = newOrder.Sausage,
+                Pepperoni = newOrder.Pepperoni,
+                Onions = newOrder.Onions,
+                GreenPeppers = newOrder.GreenPeppers,
+                TotalCost = newOrder.TotalCost,
+                Name = newOrder.Name,
+                Address = newOrder.Address,
+                ZipCode = newOrder.ZipCode,
+                PhoneNumber = newOrder.PhoneNumber,
+                PaymentType = newOrder.PaymentType,
+                Completed = newOrder.Completed
+            };
+
+            orders.Add(order);
+            db.SaveChanges();
+        }
     }
 }

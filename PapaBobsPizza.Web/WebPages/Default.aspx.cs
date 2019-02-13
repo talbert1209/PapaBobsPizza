@@ -16,7 +16,7 @@ namespace PapaBobsPizza.Web.WebPages
 
         protected void orderButton_Click(object sender, EventArgs e)
         {
-            var order = new DTO.Order
+            var newOrder = new DTO.Order
             {
                 Size = sizeDropDownList.Text,
                 Crust = crustDropDownList.Text,
@@ -28,8 +28,11 @@ namespace PapaBobsPizza.Web.WebPages
                 Address = addressTextBox.Text,
                 ZipCode = zipTextBox.Text,
                 PhoneNumber = phoneNumberTextBox.Text,
-                PaymentType = paymentTypeRadioButtonList.SelectedValue
+                PaymentType = paymentTypeRadioButtonList.SelectedValue,
+                TotalCost = Convert.ToDecimal(totalCostLabel.Text)
             };
+
+            Domain.OrdersManager.AddOrder(newOrder);
         }
 
         private void ClearFields()

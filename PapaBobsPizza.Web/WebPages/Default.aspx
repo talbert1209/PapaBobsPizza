@@ -69,6 +69,7 @@
             <asp:Button ID="orderButton" runat="server" Text=" Order " CssClass="btn btn-primary" OnClick="orderButton_Click"/>
             <br />
             <h3>Order Total: </h3>
+            <asp:Label ID="totalCostLabel" runat="server" Text="9.99"></asp:Label>
             <br/>
         </div>
     </form>
