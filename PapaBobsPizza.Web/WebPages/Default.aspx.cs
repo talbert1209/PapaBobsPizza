@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -30,13 +31,13 @@ namespace PapaBobsPizza.Web.WebPages
                 ZipCode = zipTextBox.Text,
                 PhoneNumber = phoneNumberTextBox.Text,
                 PaymentType = paymentTypeRadioButtonList.SelectedValue,
-                TotalCost = decimal.Parse(totalCostLabel.Text)
+                TotalCost = decimal.Parse(totalCostLabel.Text, NumberStyles.Currency)
             };
 
             Domain.OrdersManager.AddOrder(newOrder);
         }
 
-        protected void sizeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        protected void CalculatePrice(object sender, EventArgs e)
         {
             totalCostLabel.Text = Domain.PizzaPrice.CalculateTotal(sizeDropDownList.SelectedIndex, crustDropDownList.SelectedIndex, 
                 sausageCheckBox.Checked, pepperoniCheckBox.Checked, onionsCheckBox.Checked, greenPeppersCheckBox.Checked).ToString("C");
