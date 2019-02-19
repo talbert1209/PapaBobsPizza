@@ -68,12 +68,13 @@
             </asp:RadioButtonList>
             
             <!-- Order button -->
-            <asp:Button ID="orderButton" runat="server" Text=" Order " CssClass="btn btn-primary" OnClick="orderButton_Click"/>
-            <br />
+            <asp:Button ID="orderButton" runat="server" Text=" Order " CssClass="btn btn-primary" OnClick="orderButton_Click"/> &nbsp; &nbsp;
+            <asp:Label ID="errorLabel" runat="server" Text="" Visible="False" class="alert alert-danger"></asp:Label>
+            <br/>
             <h3>Order Total: 
             <asp:Label ID="totalCostLabel" runat="server" Text=""></asp:Label>
             </h3>
-            <asp:Label ID="Label1" runat="server" Text="" Visible="False" class="alert alert-danger"></asp:Label>
+            
         </div>
     </form>
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
