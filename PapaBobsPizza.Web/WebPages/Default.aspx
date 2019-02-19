@@ -73,7 +73,7 @@
             <h3>Order Total: 
             <asp:Label ID="totalCostLabel" runat="server" Text=""></asp:Label>
             </h3>
-            <br/>
+            <asp:Label ID="Label1" runat="server" Text="" Visible="False" class="alert alert-danger"></asp:Label>
         </div>
     </form>
     <script src="../Scripts/jquery-3.0.0.min.js"></script>

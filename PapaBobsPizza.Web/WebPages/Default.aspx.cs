@@ -35,6 +35,7 @@ namespace PapaBobsPizza.Web.WebPages
             };
 
             Domain.OrdersManager.AddOrder(newOrder);
+            Response.Redirect("Success.html");
         }
 
         protected void CalculatePrice(object sender, EventArgs e)
