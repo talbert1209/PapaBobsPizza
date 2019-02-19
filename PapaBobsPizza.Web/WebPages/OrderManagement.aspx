@@ -29,7 +29,7 @@
                     <asp:CheckBoxField DataField="Onions" HeaderText=" Onions " />
                     <asp:CheckBoxField DataField="GreenPeppers" HeaderText=" Green Peppers " />
                     <asp:CheckBoxField DataField="Completed" HeaderText=" Complete? " />
-                    <asp:BoundField DataField="TotalCost" HeaderText="Total Price" SortExpression="TotalCost" />
+                    <asp:BoundField DataField="TotalCost" HeaderText="Total Price" SortExpression="TotalCost" DataFormatString="{0:c}" />
                 </Columns>
             </asp:GridView>
         </div>
