@@ -21,6 +21,7 @@
             <div class="form-group">
                 <label>Size:</label>
                 <asp:DropDownList ID="sizeDropDownList" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="CalculatePrice">
+                    <asp:ListItem>Select a size...</asp:ListItem>
                     <asp:ListItem>Small (12 inch - $12)</asp:ListItem>
                     <asp:ListItem>Medium (14 inch - $14)</asp:ListItem>
                     <asp:ListItem>Large (16 inch - $16)</asp:ListItem>
@@ -29,6 +30,7 @@
             <div class="form-group">
                 <label>Crust:</label>
                 <asp:DropDownList ID="crustDropDownList" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="CalculatePrice">
+                    <asp:ListItem>Select a crust...</asp:ListItem>
                     <asp:ListItem>Regular</asp:ListItem>
                     <asp:ListItem>Thin</asp:ListItem>
                     <asp:ListItem>Thick (+ $2)</asp:ListItem>

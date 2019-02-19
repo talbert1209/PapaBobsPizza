@@ -23,11 +23,11 @@ namespace PapaBobsPizza.Domain
         {
             switch (value)
             {
-                case 0:
-                    return SmallPizzaPrice;
                 case 1:
-                    return MediumPizzaPrice;
+                    return SmallPizzaPrice;
                 case 2:
+                    return MediumPizzaPrice;
+                case 3:
                     return LargePizzaPrice;
                 default:
                     return 0M;
@@ -38,7 +38,7 @@ namespace PapaBobsPizza.Domain
         {
             switch (value)
             {
-                case 2:
+                case 3:
                     return ThickCrustPrice;
                 default:
                     return 0M;
