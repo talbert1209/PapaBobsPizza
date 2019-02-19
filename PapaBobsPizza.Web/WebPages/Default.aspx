@@ -63,7 +63,7 @@
             <!-- Payment information -->
             <h4>Payment information</h4>
             <asp:RadioButtonList ID="paymentTypeRadioButtonList" runat="server">
-                <asp:ListItem Text ="Cash" Value="Cash" />
+                <asp:ListItem Text ="Cash" Value="Cash" Selected="True"/>
                 <asp:ListItem Text ="Credit" Value="Credit" />
             </asp:RadioButtonList>
             
