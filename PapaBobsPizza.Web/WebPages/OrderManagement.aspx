@@ -21,6 +21,7 @@
                 <Columns>
                     <asp:ButtonField Text=" Complete " />
                     <asp:BoundField DataField="OrderID" HeaderText=" Order ID " />
+                    <asp:BoundField DataField="Name" HeaderText="Customer Name" />
                     <asp:BoundField DataField="Size" HeaderText=" Pizza Size " />
                     <asp:BoundField DataField="Crust" HeaderText=" Crust Type " />
                     <asp:CheckBoxField DataField="Sausage" HeaderText=" Sausage " />
