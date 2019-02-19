@@ -11,7 +11,7 @@ namespace PapaBobsPizza.Data
         public static List<DTO.Order> GetOrders()
         {
             PBPizzaDBEntities db = new PBPizzaDBEntities();
-            var dbOrders = db.Orders.Where(p => p.Completed == true).ToList();
+            var dbOrders = db.Orders.Where(p => p.Completed == false).ToList();
 
             var dtoOrders = new List<DTO.Order>();
 
