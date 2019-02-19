@@ -17,7 +17,7 @@
             </div>
             
             <!-- This is the grid -->
-            <asp:GridView ID="OrdersGridView" runat="server" AutoGenerateColumns="False">
+            <asp:GridView ID="OrdersGridView" runat="server" AutoGenerateColumns="False" OnRowCommand="OrdersGridView_RowCommand">
                 <Columns>
                     <asp:ButtonField Text=" Complete " />
                     <asp:BoundField DataField="OrderID" HeaderText=" Order ID " />

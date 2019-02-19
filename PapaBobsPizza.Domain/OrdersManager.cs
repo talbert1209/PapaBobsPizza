@@ -19,5 +19,10 @@ namespace PapaBobsPizza.Domain
         {
             Data.OrdersRepository.AddOrder(newOrder);
         }
+
+        public static void CompleteOrder(int orderId)
+        {
+            Data.OrdersRepository.CompleteOrder(orderId);
+        }
     }
 }

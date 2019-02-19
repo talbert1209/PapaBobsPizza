@@ -66,5 +66,16 @@ namespace PapaBobsPizza.Data
             orders.Add(order);
             db.SaveChanges();
         }
+
+        public static void CompleteOrder(int orderId)
+        {
+            PBPizzaDBEntities db = new PBPizzaDBEntities();
+
+            var order = db.Orders.FirstOrDefault(p => p.OrderId == orderId);
+            if (order != null)
+                order.Completed = true;
+            db.SaveChanges();
+
+        }
     }
 }
